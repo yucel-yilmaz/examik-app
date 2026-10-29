@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Examik masaüstü</title>
+    <meta name="description" content="Examik masaüstü uygulaması doküman tarayıcınızın PDF kaydettiği klasörü izler; taranan optik formlar seçtiğiniz sınava kendiliğinden yüklenir ve okunur." />
+    <meta property="og:title" content="Examik masaüstü" />
+    <meta property="og:description" content="Formları tarayın, Examik okusun. Windows ve macOS için." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#111b3a" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#indir">İndirme bölümüne geç</a>
+
+    <header class="hero">
+      <nav class="bar wrap" aria-label="Ana menü">
+        <a class="brand" href="./" aria-label="Examik ana sayfa">
+          <span class="mark" aria-hidden="true"><span></span></span>
+          Examik
+        </a>
+        <div class="bar-links">
+          <a href="#kurulum">Kurulum</a>
+          <a href="https://examik.futurego.dev/giris">Web paneli</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid wrap">
+        <div class="hero-copy">
+          <h1>Formları tarayın, Examik okusun.</h1>
+          <p class="lede">
+            Examik masaüstü uygulaması, doküman tarayıcınızın PDF kaydettiği klasörü izler. Taranan formlar seçtiğiniz sınava kendiliğinden yüklenir ve her sayfanın okunup okunmadığını
+            hemen görürsünüz.
+          </p>
+          <div class="downloads" id="indir" data-state="loading">
+            <a class="btn btn-primary" data-os="windows" href="https://github.com/yucel-yilmaz/examik-app/releases/latest">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 12-4-4m4 4 4-4M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4" /></svg>
+              <span>Windows için indir</span>
+            </a>
+            <a class="btn btn-ghost" data-os="mac" href="https://github.com/yucel-yilmaz/examik-app/releases/latest">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 12-4-4m4 4 4-4M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4" /></svg>
+              <span>macOS için indir</span>
+            </a>
+          </div>
+          <p class="release" aria-live="polite">
+            <span data-release>Sürüm bilgisi alınıyor…</span>
+            <span class="sep" aria-hidden="true">·</span>
+            Windows 10 ve 11 · macOS 10.15 ve sonrası
+          </p>
+          <a class="web-link" href="https://examik.futurego.dev/kayit">
+            Kurulum istemiyor musunuz? Tarayıcıdan kullanın
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+
+        <figure class="window" aria-label="Examik masaüstü uygulaması: 24 sayfalık bir tarama okunuyor; 23 sayfa okundu, biri kontrol istiyor, bir sayfa okunamadı.">
+          <div class="win-bar" aria-hidden="true"><i></i><i></i><i></i><span>Examik</span></div>
+          <div class="win-body" aria-hidden="true">
+            <aside class="win-nav">
+              <div class="win-brand"><span class="mark small"><span></span></span>Examik</div>
+              <p class="win-label">Sınavlar</p>
+              <ul>
+                <li class="on">8. Sınıf Deneme 3<small>132 form</small></li>
+                <li>9-A Matematik 1. Yazılı<small>31 form</small></li>
+                <li>10-B Fizik Yazılısı<small>Anahtar eksik</small></li>
+              </ul>
+              <div class="win-user"><span>AK</span>Ayşe Kaya</div>
+            </aside>
+            <div class="win-main">
+              <div class="win-head">
+                <div>
+                  <b>8. Sınıf Deneme 3</b>
+                  <small>90 soru · Kitapçık A, B</small>
+                </div>
+                <span class="pill">132 form</span>
+              </div>
+              <div class="watch">
+                <span class="pulse"></span>
+                <div>
+                  <b>Klasör izleniyor</b>
+                  <small>Belgeler › Taramalar</small>
+                </div>
+              </div>
+              <div class="job">
+                <div class="job-head">
+                  <span class="file">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /></svg>
+                    tarama_8B_0412.pdf
+                  </span>
+                  <span class="count"><b data-count>0</b>/24</span>
+                </div>
+                <div class="map"></div>
+                <div class="legend">
+                  <span><i class="ok"></i>Okundu</span>
+                  <span><i class="warn"></i>Kontrol istiyor</span>
+                  <span><i class="bad"></i>Okunamadı</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <section class="steps wrap" aria-labelledby="nasil">
+        <h2 id="nasil">Kâğıttan sonuca üç adım</h2>
+        <ol>
+          <li>
+            <span class="num">1</span>
+            <h3>Formları yazdırın</h3>
+            <p>Web panelinden öğrencilerin adı ve numarası basılı formları normal A4 kâğıda yazdırın. Özel optik kâğıt ya da okuyucu cihaz gerekmez.</p>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <h3>Toplu tarayın</h3>
+            <p>Doldurulan formları doküman tarayıcıda tek PDF olarak tarayın. Tarayıcının kayıt klasörünü uygulamada bir kez seçmeniz yeter.</p>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <h3>Sonuçlara bakın</h3>
+            <p>Uygulama dosyayı yükler, Examik her sayfayı okur. Net, puan, sıralama ve madde analizi web panelinde hazır olur.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="features wrap" aria-labelledby="ozellikler">
+        <h2 id="ozellikler">Tarama gününde işinizi kolaylaştırır</h2>
+        <div class="feature-grid">
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM12 11v4m-2-2h4" /></svg>
+            <h3>Klasör izleme</h3>
+            <p>Tarayıcı dosyayı yazmayı bitirince PDF seçili sınava gider ve bir bildirim gelir. Dosyayı pencereye sürükleyip bırakabilirsiniz de.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16m0 5v-5h5" /></svg>
+            <h3>Kesintiye dayanıklı sıra</h3>
+            <p>İnternet kesilirse dosyalar sırada bekler ve bağlantı gelince yeniden denenir. Uygulamayı kapatsanız da sıra kaybolmaz.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" /></svg>
+            <h3>Sayfa haritası</h3>
+            <p>Her PDF'in sayfaları okundu, kontrol istiyor ya da okunamadı diye renklenir. Hangi kâğıda yeniden bakmanız gerektiğini hemen görürsünüz.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6zM9 12l2 2 4-4" /></svg>
+            <h3>Şifreniz saklanmaz</h3>
+            <p>Okulunuzun Examik hesabıyla giriş yaparsınız. Oturum anahtarı macOS Anahtar Zinciri'nde ya da Windows Kimlik Bilgisi Yöneticisi'nde durur.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="install wrap" id="kurulum" aria-labelledby="ilk-acilis">
+        <div class="install-intro">
+          <h2 id="ilk-acilis">İlk açılış</h2>
+          <p>
+            Examik'in kurulum dosyaları henüz kod imzalı değil. Bu yüzden işletim sisteminiz ilk açılışta "tanınmayan uygulama" uyarısı gösterir. Bir kez onayladıktan sonra uyarı tekrar
+            çıkmaz.
+          </p>
+        </div>
+        <div class="install-grid">
+          <article class="os" data-os-card="windows">
+            <h3>Windows</h3>
+            <ol>
+              <li>İndirdiğiniz <code>Examik-Windows-Kurulum.exe</code> dosyasını açın.</li>
+              <li>"Windows bilgisayarınızı korudu" penceresinde <b>Ek bilgi</b>'ye, ardından <b>Yine de çalıştır</b>'a tıklayın.</li>
+              <li>Kurulum bitince Examik'i Başlat menüsünden açın ve okulunuzun hesabıyla giriş yapın.</li>
+            </ol>
+          </article>
+          <article class="os" data-os-card="mac">
+            <h3>macOS</h3>
+            <ol>
+              <li><code>Examik-macOS.dmg</code> dosyasını açıp Examik'i <b>Uygulamalar</b> klasörüne sürükleyin.</li>
+              <li>Uygulamalar'da Examik'e sağ tıklayıp <b>Aç</b>'ı seçin, çıkan pencerede yeniden <b>Aç</b>'a tıklayın.</li>
+              <li>macOS 15 ve sonrasında bu pencere çıkmazsa <b>Sistem Ayarları › Gizlilik ve Güvenlik</b>'te <b>Yine de Aç</b>'a tıklayın.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="web">
+        <div class="wrap web-inner">
+          <div>
+            <h2>Sınav hazırlığı ve sonuçlar web panelinde.</h2>
+            <p>
+              Masaüstü uygulaması taramaları yükler. Cevap anahtarı, kelebek oturma planı, kişiye özel formlar, sonuçlar ve analizler tarayıcıdan, her bilgisayardan açılan web panelindedir.
+            </p>
+          </div>
+          <div class="web-actions">
+            <a class="btn btn-primary" href="https://examik.futurego.dev/kayit">Kurum kaydı oluştur</a>
+            <a class="btn btn-ghost" href="https://examik.futurego.dev/giris">Giriş yap</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot wrap">
+      <span class="brand small-brand"><span class="mark small" aria-hidden="true"><span></span></span>Examik</span>
+      <nav aria-label="Alt menü">
+        <a href="https://github.com/yucel-yilmaz/examik-app/releases">Sürüm notları</a>
+        <a href="https://examik.futurego.dev">Web paneli</a>
+      </nav>
+    </footer>
+  </body>
+</html>
